@@ -1,11 +1,22 @@
 ---
-title: "About"
-description: "A few years ago, while visiting or, rather, rummaging about Notre-Dame, the author of this book found, in an obscure nook of one of the towers, the following word, engraved by hand upon the wall: —ANANKE."
-featured_image: '/images/Victor_Hugo-Hunchback.jpg'
+title: "About Me"
+description: "Senior Consultant at Improving"
 menu:
   main:
     weight: 1
 ---
-{{< figure src="/images/Victor_Hugo-Hunchback.jpg" title="Illustration from Victor Hugo et son temps (1881)" >}}
+My name is Leo Amelyan, and I am a Senior Consultant at [Improving](https://www.improving.com/).
 
-_The Hunchback of Notre-Dame_ (French: _Notre-Dame de Paris_) is a French Romantic/Gothic novel by Victor Hugo, published in 1831. The original French title refers to Notre Dame Cathedral, on which the story is centered. English translator Frederic Shoberl named the novel The Hunchback of Notre Dame in 1833 because at the time, Gothic novels were more popular than Romance novels in England. The story is set in Paris, France in the Late Middle Ages, during the reign of Louis XI.
+I have a background in:
+
+- Full software life cycle incorporating the Scrum framework.
+- Object-oriented programming utilizing SOLID Design Principles.
+- Test-driven development (TDD).
+
+I have experience in the following technologies:
+
+**Back-end:** C#, .Net Core, Azure Functions, Azure Service Bus, MassTransit, PostgreSQL, Entity Framework, Dapper.
+
+**Front-end:** Angular, TypeScript, JavaScript.
+
+**DevOps:** Azure, Amazon Web Services, CI/CD using Azure Pipelines (YAML), GitHub Actions, Docker, Git.
