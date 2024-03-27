@@ -5,18 +5,30 @@ menu:
   main:
     weight: 1
 ---
-My name is Leo Amelyan, and I am a Senior Consultant at [Improving](https://www.improving.com/).
+## About Me
 
-I have a background in:
 
-- Full software life cycle incorporating the Scrum framework.
-- Object-oriented programming utilizing SOLID Design Principles.
-- Test-driven development (TDD).
+I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
-I have experience in the following technologies:
+### Expertise Highlights
+- Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
+- Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
+- Extensive experience in diverse projects, including ERP systems, CRM systems, content management systems, and automation processes.
 
-**Back-end:** C#, .Net Core, Azure Functions, Azure Service Bus, MassTransit, PostgreSQL, Entity Framework, Dapper.
+### Technical Proficiency
 
-**Front-end:** Angular, TypeScript, JavaScript.
+#### Back-end
+- C#
+- .Net Core, Azure Functions
+- Azure Service Bus, MassTransit
+- PostgreSQL, MSSQL, Entity Framework, Dapper
 
-**DevOps:** Azure, Amazon Web Services, CI/CD using Azure Pipelines (YAML), GitHub Actions, Docker, Git.
+#### Front-end
+- Angular
+- TypeScript, JavaScript
+
+
+#### DevOps
+- Azure, Amazon Web Services
+- CI/CD using Azure Pipelines or GitHub Actions (using YAML)
+- Docker, Git
