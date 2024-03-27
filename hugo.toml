@@ -1,4 +1,7 @@
 baseURL = 'https://lamelyan.github.io/blog-hugo/'
 languageCode = 'en-us'
-title = 'My blog update'
+title = "Leo Amelyan's Blog"
 theme = 'ananke'
+
+[params]
+  description = "The last theme you'll ever need. Maybe."
