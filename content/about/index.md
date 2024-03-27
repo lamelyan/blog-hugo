@@ -5,8 +5,6 @@ menu:
   main:
     weight: 1
 ---
-## About Me
-
 
 I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
@@ -19,7 +17,7 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 
 #### Back-end
 - C#
-- .Net Core, Azure Functions
+- .Net Core API, Azure Functions
 - Azure Service Bus, MassTransit
 - PostgreSQL, MSSQL, Entity Framework, Dapper
 
