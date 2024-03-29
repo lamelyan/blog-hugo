@@ -11,7 +11,6 @@ I found a couple of advantages of using a document database compared to a tradit
 
 
 
---- 
 
 ## Schema flexibility
 
@@ -22,17 +21,25 @@ Let's say you have a table that stores user's information.  Let's store just fir
 
 ### Relational way
 
-![[Pasted image 20240328103445.png]]
+ ![relational-way](./initial-user-schema.png)
 
-At a later point, we decide that we also want to store user's twitter handle. Where would it go?  We could create a new column in user table or have a new table that stores user social media information. In either case, we need to update database schema.  PAIN! Deal with scripts and red tape that goes along with updating database schema in different environments.
 
-![[Pasted image 20240328103500.png]]
+At a later point, we decide that we also want to store user's twitter handle. 
+Where would it go?  We could create a new column in user table or have a new table 
+that stores user social media information. 
+
+![update user schema](update-user-schema.png)
+
+In either case, we need to update database schema. 
+PAIN! Deal with scripts and red tape that goes along with updating database schema in different environments.
+
+
 
 ### Document way
 
 Let's see how it's done using document database. Using document database, we store data as a document. Specifically we store it as json object. This allows us for flexibility to change our schema without creating additional tables or columns. Just add a new property to the json object.
 
-![[Pasted image 20240328103524.png]]
+![](update-user-structure-using-json-document.png)
 
 
 ## Eliminate Data Transformation
@@ -46,7 +53,7 @@ One other goal of document database is to reduce data transformation. Let me dem
 Let's say we want to store a person's profile akin to LinkedIn.
 
 
-![[Pasted image 20240328103620.png]]
+![](user-profile.png)
 
 
 
@@ -54,7 +61,7 @@ Let's say we want to store a person's profile akin to LinkedIn.
 
 What is typically done in a relational database is the normalization of data. We break down different characteristics of the information into their own tables with their own columns. Essentially, we 'shred' the data.
 
-![[Pasted image 20240328103711.png]]
+![](shred-user-profile-data.png)
 
 Now, to retrieve the information we need, we query data from multiple tables and hope for performant joins that don't cause delays.
 
@@ -65,7 +72,7 @@ Essentially, we pay the price twice: once by creating multiple tables with their
 
 One of the features of a document database is to store the data the way you need it. If you're going to retrieve a user's profile information this way most of the time, then store it accordingly—as an entire profile stored as a JSON object.
 
-![[Pasted image 20240328103727.png]]
+![](user-profile-as-json-document.png)
 
 Store it in one table and query it by user's id or email. Done!
 
