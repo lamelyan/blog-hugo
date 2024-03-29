@@ -1,6 +1,7 @@
 ---
 title: "About Me"
 description: "Senior Consultant at Improving"
+featured_image: '/images/shakti-rajpurohit-TcX1QIaUKXg-unsplash.jpg'
 menu:
   main:
     weight: 1

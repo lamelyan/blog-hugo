@@ -1,7 +1,8 @@
-+++
-title = 'Document vs Relational Database'
-date = 2024-03-29T05:03:33-06:00
-+++
+---
+title: 'Document vs Relational Database'
+date: 2024-03-29T05:03:33-06:00
+featured_image:  'maksym-kaharlytskyi-Q9y3LRuuxmg-unsplash.jpg'
+---
 
 # Overview
 
