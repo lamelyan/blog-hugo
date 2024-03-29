@@ -37,20 +37,22 @@ PAIN! Deal with scripts and red tape that goes along with updating database sche
 
 ### Document way
 
-Let's see how it's done using document database. Using document database, we store data as a document. Specifically we store it as json object. This allows us for flexibility to change our schema without creating additional tables or columns. Just add a new property to the json object.
+Let's see how it's done using a document database. With a document database, data is stored as a document, typically in the form of a JSON object. 
+
 
 ![](update-user-structure-using-json-document.png)
+    
+This approach provides flexibility, allowing us to modify our schema without the need to create additional tables or columns; we can simply add a new property to the JSON object.
 
 
 ## Eliminate Data Transformation
 
-
-One other goal of document database is to reduce data transformation. Let me demonstrate with example below.
+One other goal of a document database is to reduce data transformation. Let me demonstrate with the example below.
 
 
 ### Relational way
 
-Let's say we want to store a person's profile akin to LinkedIn.
+Suppose we wish to store a person's profile similar to that of LinkedIn.
 
 
 ![](user-profile.png)
