@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-description: "Senior Consultant at Improving"
+description: "Senior Consultant - Software Developer"
 featured_image: '/images/shakti-rajpurohit-TcX1QIaUKXg-unsplash.jpg'
 menu:
   main:
@@ -18,7 +18,7 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 
 #### Back-end
 - C#
-- .Net Core API, Azure Functions
+- .Net Core, Azure Functions, REST API
 - Azure Service Bus, MassTransit
 - PostgreSQL, MSSQL, Entity Framework, Dapper
 
