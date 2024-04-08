@@ -2,3 +2,12 @@ baseURL = 'https://lamelyan.github.io/blog-hugo/'
 languageCode = 'en-us'
 title = "Leo Amelyan's Blog"
 theme = 'ananke'
+
+
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/lamelyan"
+
+[[params.ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/amelyan/"
