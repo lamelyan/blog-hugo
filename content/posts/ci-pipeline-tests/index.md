@@ -6,7 +6,15 @@ draft = true
 +++
 
 # Overview
+In this post I'll describe how to move your tests (unit, integration, end-to-end) to CI/CD pipeline.
+
+### Why move tests to CI/CD pipeline?
+Moving unit, integration and end-to-end tests to a CI/CD pipeline brings numerous advantages for software development teams. Firstly, it automates the testing process, ensuring that tests are executed automatically with every code change. This leads to early detection of bugs and issues, promoting better code quality and reducing the likelihood of regressions.
+
+Moreover, it facilitates faster feedback loops for developers, enabling them to address issues promptly. Consequently, this increases confidence in deployments, as code changes undergo thorough testing before reaching the production environment.
+
 The end goal is to run a test that exercises all the layers of the application in the Azure Pipeline.
+
 
 I needed to be able to run all end-to-end tests or just "smoke tests". Also, I would like to test this process on my local machine as well. 
 

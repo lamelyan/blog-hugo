@@ -10,22 +10,21 @@ menu:
 I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
 ### Expertise Highlights
-- Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
-- Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
-- Extensive experience in diverse projects, including ERP systems, CRM systems, content management systems, and automation processes.
+ Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
+
+ Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
+
+ Extensive experience in diverse projects, including ERP systems, CRM systems, content management systems, and automation processes.
 
 ### Technical Proficiency
 
 
-#### Back-end
-C#, .Net Core, Azure Functions, REST API, Azure Service Bus, MassTransit, PostgreSQL, MSSQL, Entity Framework, Dapper
+**Back-end:** C#, .Net Core, Azure Functions, REST API, Azure Service Bus, MassTransit, PostgreSQL, MSSQL, Entity Framework, Dapper
 
-#### Front-end
-Angular, TypeScript, JavaScript, CSS, HTML
+**Front-end:** Angular, TypeScript, JavaScript, CSS, HTML
 
 
-#### DevOps
-Azure, Amazon Web Services, CI/CD using Azure Pipelines or GitHub Actions (using YAML), Docker, Git
+**DevOps:** Azure, Amazon Web Services, CI/CD using Azure Pipelines or GitHub Actions (using YAML), Docker, Git
 
 # Recommendations
 What others say:
@@ -39,10 +38,6 @@ What others say:
 > and **he'll figure out a way, implement it, and integrate it in with your app and your whole release process.** Really, what is better than that?
 > 
 > ~Chris Owens
-
-> Leo is very **bright and easy person go work with**. Leo is very **reliable and fun co-worker** to have around. I highly recommend him to any employers. 
-> 
-> ~ Fabio De Martino 
 
 
 > I worked with Leo on a **large-scale and complex web application** development project. He was very pleasant to work with and was a valuable member of our team. Leo had a **good eye for user interface** and design elements that could improve the application. He always asked questions when something was not clear or understood. Leo also **took direction well and was willing to make requested updates** to application functionality.
@@ -60,6 +55,12 @@ What others say:
 > I worked with Leo on several projects while we were both employed at Trisept solutions. Leo is someone who **works well with others and is an excellent teamplayer**. He has a **good grasp of a wide range of technologies** and would be a valuable asset to any organization.
 > 
 > ~ Mike Paynter
+
+
+> Leo is very **bright and easy person go work with**. Leo is very **reliable and fun co-worker** to have around. I highly recommend him to any employers.
+>
+> ~ Fabio De Martino
+
 
 > Leo **knew his stuff** and was very **nice to work with**.
 > 
