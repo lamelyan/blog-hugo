@@ -29,11 +29,6 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 # Recommendations
 What others say:
 
-> Leo has been **great to work with**! 
-> He came into the group when we needed backend help, 
-> then was quickly thrown into devops world as we worked on getting our app launched on Azure, 
-> dealing with data storage issues, authentication, CI, authentication, 
-> importing data, authentication, user permissions, and authentication! 
 > He's one of those people who you can give a problem to, not even knowing if it's solvable, 
 > and **he'll figure out a way, implement it, and integrate it in with your app and your whole release process.** Really, what is better than that?
 > 
