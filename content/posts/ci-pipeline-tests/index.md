@@ -6,93 +6,34 @@ draft = true
 +++
 
 # Overview
-In this post I'll describe how to move your tests (unit, integration, end-to-end) to CI/CD pipeline.
+In this post, I will provide a comprehensive overview of setting up end-to-end tests to run in the CI/CD pipeline. 
+End-to-end tests verify the entire application, including the front-end, back-end APIs, and the database. 
+Although I could run unit tests, integration tests, and end-to-end tests independently, combining them into an 
+end-to-end testing suite offers a more holistic view of the application's overall functionality and behavior.
+
+I plan to write up the details on each type of test, challenges encountered, and solutions in future posts.
 
 ### Why move tests to CI/CD pipeline?
-Moving unit, integration and end-to-end tests to a CI/CD pipeline brings numerous advantages for software development teams. Firstly, it automates the testing process, ensuring that tests are executed automatically with every code change. This leads to early detection of bugs and issues, promoting better code quality and reducing the likelihood of regressions.
 
-Moreover, it facilitates faster feedback loops for developers, enabling them to address issues promptly. Consequently, this increases confidence in deployments, as code changes undergo thorough testing before reaching the production environment.
+As always, it's good to start by asking (the "why") the reason you are about to embark on this endeavor. 
 
-The end goal is to run a test that exercises all the layers of the application in the Azure Pipeline.
+So, why would you want to move your tests to CI/CD pipeline?
 
+Moving unit, integration and end-to-end tests to a CI/CD pipeline brings numerous advantages for software development teams. 
+Firstly, it automates the testing process, ensuring that tests are executed automatically with every code change. 
+This leads to early detection of bugs and issues, promoting better code quality and reducing the likelihood of regressions.
 
-I needed to be able to run all end-to-end tests or just "smoke tests". Also, I would like to test this process on my local machine as well. 
+Moreover, it facilitates faster feedback loops for developers, enabling them to address issues promptly.
+Consequently, this increases confidence in deployments, as code changes undergo thorough testing before reaching the production environment.
+
+### End result
+
+The end goal is to run tests to exercise all the layers of the application in the CI/CD Pipeline.
+
+If the tests do not succeed, we have an option to pause the deployment, notify the team of the issues. 
 
 
 ![](overview-design.png)
-
-# Docker compose set up 
-In order to to spin up containers locally or do so in the CI pipeline, 
-and to run just the "smoke tests" or for all tests, I created multiple docker compose files.
-
-Then common functionality is extracted into "base" docker compose file from which others will extend.
-
-
-![](docker-compose-file-structure.jpg)
-
-# Run tests locally
-
-In order to test, you can spin up the docker containers locally. 
-There are multiple things that you need to do to avoid confusion.
-
-Things like:
-
-- stop running containers
-- remove containers
-- remove volumes that have stale data
-- remove dangling images
-- remove existing images for UI and backend API
-- spin up new services with docker compose
-- copy tests results into specific directory
-
-After doing these steps manually a couple of times (and forgetting to do them) it was time to automate these steps.
-
-
-Here is a powershell script that I came up with that will run either smoke tests or all tests. It will also take care of tearing down and spinning up of containers as well as copying test results into specified directory. 
-
-```powershell
-#
-# Helper powershell script to automate testing on local machine.
-#
-Function Get-TypeOfTest {
-  $type=Read-Host "
-    1 - All Tests
-    2 - Smoke Tests
-    Please choose"
-  Switch ($type){
-    1 {$choice="all"}
-    2 {$choice="smoke"}
-  }
-  return $choice
-}
-
-$testType=Get-TypeOfTest
-
-# Use docker compose file according to user's selection of tests
-$dockerComposeFile = ".\docker-compose-e2e-local-$testType-tests.yml"
-
-# stop and remove containers defined in the compose file
-docker compose -f .\docker-compose-e2e-base.yml -f $dockerComposeFile down
-
-# remove images so they can be rebuilt
-$api_image=$(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "api_for_ci_e2e_test")
-$ui_image =$(docker images --format "{{.Repository}}:{{.Tag}}"|findstr "ui_for_ci_e2e_tests")
-if ($api_image){  docker rmi $api_image }
-if ($ui_image){  docker rmi $ui_image }
-
-# remove volumes
-docker volume prune -f
-
-# spin up containers
-docker compose -f .\docker-compose-e2e-base.yml  -f $dockerComposeFile up --abort-on-container-exit
-
-# copy screenshots to local folder and open it
-docker cp cypress:/e2e/cypress/screenshots ./results/cypress_screenshots
-docker cp cypress:/e2e/test_results ./results/test_results
-
-# open folder with tests results
-explorer .\results
-```
 
 
 # Microsoft vs self-hosted  build agents
