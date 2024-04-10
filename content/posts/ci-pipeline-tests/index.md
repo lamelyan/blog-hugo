@@ -2,7 +2,7 @@
 title = 'Run end-to-end tests in CI pipeline'
 date = 2024-04-04T15:37:06-05:00
 featured_image = 'overview-design.png'
-draft = true 
+draft = false 
 +++
 
 # Overview
@@ -12,6 +12,7 @@ Although I could run unit tests, integration tests, and end-to-end tests indepen
 end-to-end testing suite offers a more holistic view of the application's overall functionality and behavior.
 
 I plan to write up the details on each type of test, challenges encountered, and solutions in future posts.
+
 
 ### Why move tests to CI/CD pipeline?
 
