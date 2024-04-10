@@ -33,3 +33,4 @@ Using a tool called 'grate', we can run scripts in a planned manner.
 
 When build pipeline kicks off, it looks at folder that contains scripts and runs the scripts that haven't been run already.
 
+
