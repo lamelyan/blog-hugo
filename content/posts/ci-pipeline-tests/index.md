@@ -30,18 +30,20 @@ Consequently, this increases confidence in deployments, as code changes undergo 
 ### End result
 
 The end goal is to run tests to exercise all the layers of the application in the CI/CD Pipeline.
-
-If the tests do not succeed, we have an option to pause the deployment, notify the team of the issues. 
+If the tests do not succeed, we have an option to pause the deployment, and notify the team of the issues.
+Here is the architecture of the pipeline. The pipeline will spin up multiple containers that will talk with each other.
 
 
 ![](overview-design.png)
 
 
-# Microsoft vs self-hosted  build agents
 
-Azure DevOps hosted agents might not have enough resources to run the tests. 
-The tests for the front-end Angular application in particular can be memory intensive. 
-On the project that I worked on, these end-to-end tests were not able to run on the default build agent. 
-The test would reach the agent timeout of 60 minutes and never complete. 
-We had to set up a self-hosted agent on a machine that has enough memory to finish running all the tests. 
+
+
+In the above diagram, you can see all parts of the application Front-End Angular SPA, the backend API, and the PostgreSQL server spun up in their containers.
+
+After these containers are up and services in them are running, Cypress's end-to-end test runner starts running tests against the container that runs the front-end.
+
+### Test results
+After Cypress tests run in a container, their results and captured screenshots are copied to the build agent and published alongside the pipeline execution history.
 
