@@ -8,12 +8,12 @@ draft = false
 # Overview
 In this post, I will provide an thousand foot overview of how to run end-to-end tests in your CI/CD pipeline.
 
-I plan to write up the details, challenges encountered, and solutions in future posts.
+In the future posts, I plan to write up the details, challenges encountered, and solutions.
 
-End-to-end tests verify the entire application, including the front-end, back-end APIs, and the database. 
-For our project, we used and end-to-end test runner called Cypress. 
-
-
+I will show how the end-to-end tests were set up in the CI/CD pipeline.
+End-to-end tests verify the entire application, including the front-end, back-end APIs, and the database.
+These components had to be up and running in the build agent and play nicely with each other.
+For our project, we used an end-to-end test runner called Cypress.
 ### Why move tests to CI/CD pipeline?
 
 As always, it's good to start by asking (the "why") the reason you are about to embark on this endeavor. 
