@@ -9,6 +9,9 @@ menu:
 
 I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
+### My path
+As a freshman in college, I was uncertain about my future path. Hearing about the potential demand for software developers, I opted for the Computer Science route. Initially challenging, I contemplated switching majors. However, for extra credit, I joined a project aiding a teacher in assembling a data capture and analysis system. Though modest—a simple app with data entry forms and grids—it ignited my passion for software development. Witnessing the practical application of my studies, I realized the ability to address real-world issues through technology. Since then, my focus has been on problem-solving through software.
+
 ### Expertise Highlights
  Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
 
