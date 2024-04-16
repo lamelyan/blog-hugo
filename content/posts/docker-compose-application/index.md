@@ -13,7 +13,7 @@ In this short post, I show the set up I used to run end-to-end tests.
 
 
 # Docker compose set up
-In order to to spin up containers locally or do so in the CI pipeline,
+In order to spin up containers locally or do so in the CI pipeline,
 and to run just the "smoke tests" or for all tests, I created multiple docker compose files.
 
 The common functionality is extracted into "base" docker compose file from which others will extend.
