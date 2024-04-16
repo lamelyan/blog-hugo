@@ -11,3 +11,8 @@ url = "https://github.com/lamelyan"
 [[params.ananke_socials]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/amelyan/"
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'

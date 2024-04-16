@@ -3,6 +3,8 @@ title = 'Docker Compose Application'
 date = 2024-04-09T07:43:54-05:00
 featured_image = 'docker-header.jpeg'
 draft = false
+tags = ["docker", "ci-cd", "azure"]
+
 +++
 
 # Overview

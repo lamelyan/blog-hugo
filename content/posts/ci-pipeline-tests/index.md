@@ -2,7 +2,8 @@
 title = 'Run end-to-end tests in CI pipeline'
 date = 2024-04-04T15:37:06-05:00
 featured_image = 'overview-design.png'
-draft = false 
+draft = false
+tags = ["docker", "ci-cd", "azure"]
 +++
 
 # Overview

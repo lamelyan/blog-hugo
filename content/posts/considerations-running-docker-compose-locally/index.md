@@ -2,7 +2,8 @@
 title = 'Considerations for Running Docker-Compose Locally'
 date = 2024-04-10T15:37:06-05:00
 featured_image = 'powershell.jpg'
-draft = false 
+draft = false
+tags = ["docker", "ci-cd"]
 +++
 
 
