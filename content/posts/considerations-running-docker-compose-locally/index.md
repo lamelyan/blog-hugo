@@ -1,39 +1,32 @@
 +++
-title = 'Automate end-to-end tests on your machine.'
+title = 'Considerations for Running Docker-Compose Locally'
 date = 2024-04-10T15:37:06-05:00
-featured_image = 'overview-design.png'
-draft = true 
+featured_image = 'powershell.jpg'
+draft = false 
 +++
 
-
-# Docker compose set up
-In order to to spin up containers locally or do so in the CI pipeline,
-and to run just the "smoke tests" or for all tests, I created multiple docker compose files.
-
-Then common functionality is extracted into "base" docker compose file from which others will extend.
-
-
-![](docker-compose-file-structure.jpg)
 
 # Run tests locally
 
 In order to test, you can spin up the docker containers locally.
-There are multiple things that you need to do to avoid confusion.
+There are multiple things that you need to do to avoid confusion during testing.
 
-Things like:
+The code that is tested, gets copied over to a docker image. 
+This means that when you make a change, you need to take care of things such as:
 
 - stop running containers
 - remove containers
 - remove volumes that have stale data
+- remove images for UI and backend API
 - remove dangling images
-- remove existing images for UI and backend API
 - spin up new services with docker compose
 - copy tests results into specific directory
 
-After doing these steps manually a couple of times (and forgetting to do them) it was time to automate these steps.
+After doing this a couple of times
+(and forgetting to do them) it was time for automation.
 
 
-Here is a powershell script that I came up with that will run either smoke tests or all tests. It will also take care of tearing down and spinning up of containers as well as copying test results into specified directory.
+Here is a powershell script that automated things and freed up my time to do more important things.
 
 ```powershell
 #
