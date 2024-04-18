@@ -9,7 +9,7 @@ menu:
 
 I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
-### Expertise Highlights
+## Expertise Highlights
  Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
 
  Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
@@ -26,7 +26,7 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 
 **DevOps:** Azure, Amazon Web Services, CI/CD using Azure Pipelines or GitHub Actions (using YAML), Docker, Git
 
-# Recommendations
+## Recommendations
 What others say:
 
 > He's one of those people who you can give a problem to, not even knowing if it's solvable, 
@@ -61,7 +61,7 @@ What others say:
 > 
 > ~ Jonathan Ulfeng
 
-### My path
+## My path
 As a freshman in college, I was uncertain about my future path.
 Hearing about the potential demand for software developers, I opted for the Computer Science route.
 Initially challenging, I contemplated switching majors.

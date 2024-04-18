@@ -6,8 +6,6 @@ featured_image = 'path.jpg'
 toc = true
 +++
 
-# Keep a blog
-
 This post is here to motivate me to keep a blog. I'll list out reasons (in no particular order) and I'll keep adding more as I think of more. 
 
 
