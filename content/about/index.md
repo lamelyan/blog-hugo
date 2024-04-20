@@ -19,12 +19,32 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 ### Technical Proficiency
 
 
-**Back-end:** C#, .Net Core, Azure Functions, REST API, Azure Service Bus, MassTransit, PostgreSQL, MSSQL, Entity Framework, Dapper
+**Back-end:** 
+C#, 
+.Net Core, 
+Azure Functions, 
+REST API, 
+Azure Service Bus, 
+MassTransit, 
+[PostgreSQL](../tags/postgres), 
+MSSQL, 
+Entity Framework, 
+Dapper
 
-**Front-end:** Angular, TypeScript, JavaScript, CSS, HTML
+**Front-end:**
+Angular, 
+TypeScript, 
+JavaScript, 
+CSS, 
+HTML
 
 
-**DevOps:** Azure, Amazon Web Services, CI/CD using Azure Pipelines or GitHub Actions (using YAML), Docker, Git
+**DevOps:** 
+[Azure](../tags/azure), 
+Amazon Web Services, 
+[CI/CD](../tags/ci-cd/) using Azure Pipelines or GitHub Actions (using YAML), 
+[Docker](../tags/docker/), 
+[Git](../tags/git)
 
 ## Recommendations
 What others say:

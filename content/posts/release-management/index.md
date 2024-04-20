@@ -4,7 +4,7 @@ date = 2024-04-03T09:24:43-05:00
 draft = false
 featured_image = 'conventional-commits.jpg'
 toc = true
-tags = ["versioning", "deployment", "release-management"]
+tags = ["git", "versioning", "deployment", "release-management"]
 +++
 
 ## Overview
