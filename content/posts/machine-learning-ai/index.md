@@ -6,8 +6,8 @@ toc = true
 tags = ["ai", "machine-learning"]
 +++
 
-Earlier this week, I participated in a two-day, hands-on introductory
-course on Machine Learning and AI, which was useful for someone new to the field like myself.
+Earlier this week, I participated in a [two-day, hands-on introductory
+course on Machine Learning and AI](https://www.improving.com/services/training/ai-ml-application-developers/), which was useful for someone new to the field like myself.
 The course helped me understand various concepts I had been curious about, including:
 
 - The relationship between Machine Learning and AI.
@@ -17,7 +17,7 @@ The course helped me understand various concepts I had been curious about, inclu
 
 Each of these topics became clearer after this course.
 
-This post is a starting point of my journey into understanding artificial intelligence and machine learning.
+This post is the starting point of my journey into understanding artificial intelligence and machine learning.
 
 To understand the concept of machine learning, it is helpful to contrast it with our "traditional" application development. 
 
@@ -35,19 +35,19 @@ along with related data that might have contributed to those answers?
 
 This is where machine learning comes in. 
 
-## Machine learnng
+## Machine learning
 
 Machine learning is the process of figuring out rules given the answers
 and the data that contributed to those answers.
 
-_Machine learning gives computers ability to learn without being explicitly programmed._ 
+_Machine learning gives computers the ability to learn without being explicitly programmed._ 
 
 
 
 ![](machine-learning-overview.jpg)
 
 ### Model
-The end result of this learning is a model, which at its core is a mathematical 
+The result of this learning is a model, which at its core is a mathematical 
 function that has been trained to recognize patterns in data. Given an input, this 
 function predicts answers based on the data it has been exposed to. 
 The accuracy and performance of the model can be enhanced by 'training' it on more data.
@@ -65,7 +65,7 @@ The better the model, the more accurate are its predicted answers.
 
 ## Model marketplace
 
-You can train your own models, or you can obtain pre-trained models 
+You can train your models, or you can obtain pre-trained models 
 from open marketplaces like [Hugging Face](https://huggingface.co/).
 These models can be used 'as is' or can be extended to meet specific needs.
 So, you can grab a model from Hugging Face and use it as a starting point. 
