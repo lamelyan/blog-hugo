@@ -1,5 +1,5 @@
 +++
-title = 'Machine Learning - Full Picture'
+title = 'Machine Learning Methods'
 date = 2024-05-01T07:24:58-05:00
 featured_image = 'ml-learning-data.png'
 toc = true
