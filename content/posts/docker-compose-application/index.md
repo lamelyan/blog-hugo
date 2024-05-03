@@ -3,18 +3,18 @@ title = 'Docker Compose Application'
 date = 2024-04-09T07:43:54-05:00
 featured_image = 'docker-header.jpeg'
 draft = false
+toc = true
 tags = ["docker", "ci-cd", "azure"]
 
 +++
 
-# Overview
 The end-to-end tests set-up described in my previous post, is a series of docker containers that talk to each other.
 This set up is nice because, it will run on any machine. This allows you to test your app locally or in CI/CD pipeline.
 In this short post, I show the set up I used to run end-to-end tests.
 
 
 
-# Docker compose set up
+## Docker compose set up
 In order to spin up containers locally or do so in the CI pipeline,
 and to run just the "smoke tests" or for all tests, I created multiple docker compose files.
 
@@ -23,7 +23,7 @@ The common functionality is extracted into "base" docker compose file from which
 ![](docker-compose-file-structure.jpg)
 
 
-# Base docker file
+## Base docker file
 
 Here is the base docker compose file from which others extend.
 

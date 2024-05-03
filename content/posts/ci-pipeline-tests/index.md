@@ -6,22 +6,19 @@ draft = false
 tags = ["docker", "ci-cd", "azure"]
 +++
 
-# Overview
-In this post, I will provide an thousand foot overview of how to run end-to-end tests in your CI/CD pipeline.
+In this post, I will provide a thousand-foot overview of how to run end-to-end tests in your CI/CD pipeline.
 
-In the future posts, I plan to write up the details, challenges encountered, and solutions.
+In future posts, I plan to write up the details, challenges encountered, and solutions.
 
-I will show how the end-to-end tests were set up in the CI/CD pipeline.
-End-to-end tests verify the entire application, including the front-end, back-end APIs, and the database.
-These components had to be up and running in the build agent and play nicely with each other.
-For our project, we used an end-to-end test runner called Cypress.
+I will show how the end-to-end tests were set up in the CI/CD pipeline. End-to-end tests verify the entire application, including the front-end, back-end APIs, and the database. These components had to be up and running in the build agent and play nicely with each other. For our project, we used an end-to-end test runner called Cypress.
+
 ### Why move tests to CI/CD pipeline?
 
 As always, it's good to start by asking (the "why") the reason you are about to embark on this endeavor. 
 
 So, why would you want to move your tests to CI/CD pipeline?
 
-Moving unit, integration and end-to-end tests to a CI/CD pipeline brings numerous advantages for software development teams. 
+Moving unit, integration, and end-to-end tests to a CI/CD pipeline brings numerous advantages for software development teams. 
 Firstly, it automates the testing process, ensuring that tests are executed automatically with every code change. 
 This leads to early detection of bugs and issues, promoting better code quality and reducing the likelihood of regressions.
 
