@@ -2,7 +2,8 @@
 title = 'Database Change Management'
 date = 2024-05-07T15:37:06-05:00
 featured_image = 'azure-ci-cd-grate.png'
-draft = true 
+draft = false     
+toc = true  
 +++
 
 So, you have database changes—either schema or data changes—that need to be implemented and rolled out across various environments.
@@ -21,12 +22,44 @@ It would be beneficial to have a process that systematically answers all these q
 and relieves you of the mundane tasks, freeing you up for more engaging activities.
 
 
+## Overview of the process
 
-##  Solution
+1. Version control your SQL scripts
+2. Set up CI/CD pipeline to take script from version control and execute against a database in specified environment
+
+### Version control SQL scripts
+Why put SQL scripts into version control?
+
+Committing SQL scripts to source control answers questions such as who created the change,
+when it was made, and why. Of course, the level of detail depends on the information included 
+in your commit messages. Besides the message itself, referencing the user story or bug number 
+associated with the change can be beneficial. This practice further helps clarify the reason for the change.
+
+Once this is done, anyone can look at version control history and figure out why this change was there.
+This helpful not just for SQL scripts but for any code that effects application or infrastructure. 
+
+### CI/CD Pipeline
+
+
+### Tools
+
+Let's lean on some tools to automate the process.
+Ideally, developers will only need to worry about writing their SQL scripts to make changes to the database.
+The deployment process should then automatically handle pushing these changes to the appropriate environments at designated times, with approvals from the appropriate parties.
 
 
 
-Use tools to automate this process.  Developers will only need to check in their scripts to a specified directory and the rest will be done by CI/CD pipeline.
+If you are using Microsoft SQL Server, then Microsoft has a tool for you  [SQL Server Data Tools](https://visualstudio.microsoft.com/vs/features/ssdt/) 
+to automate this process. However, this tool is Microsoft specific. 
+
+Is there a more generic version of this that is tech stack agnostic?
+
+One such option is the [Grate - SQL scripts migration runner](https://erikbra.github.io/grate/). 
+
+Since this tool just executes SQL scripts, you can use it to deploy to variety of database. 
+
+I was able to use Grate on a couple of projects that included PostgreSQL and MySQL databases.
+
 
 ### Data Migration workflow
 
