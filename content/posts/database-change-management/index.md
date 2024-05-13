@@ -2,7 +2,7 @@
 title = 'Database Change Management'
 date = 2024-05-07T15:37:06-05:00
 featured_image = 'azure-ci-cd-grate.png'
-draft = false     
+draft = true 
 toc = true  
 +++
 
@@ -24,8 +24,14 @@ and relieves you of the mundane tasks, freeing you up for more engaging activiti
 
 ## Overview of the process
 
+At a high level, the process is:
+
 1. Version control your SQL scripts
-2. Set up CI/CD pipeline to take script from version control and execute against a database in specified environment
+2. Set up CI/CD pipeline to run scripts on a database in specified environment
+ 
+Ideally, developers will only need to worry about writing their SQL scripts to make changes to the database.
+The deployment process should then automatically handle pushing these changes to the appropriate environments at designated times, with approvals from the appropriate parties.
+
 
 ### Version control SQL scripts
 Why put SQL scripts into version control?
@@ -40,48 +46,41 @@ This helpful not just for SQL scripts but for any code that effects application 
 
 ### CI/CD Pipeline
 
+After the SQL scripts are pushed to version control,
+CI/CD pipeline is triggered.
 
-### Tools
+Pipeline does the following:
 
-Let's lean on some tools to automate the process.
-Ideally, developers will only need to worry about writing their SQL scripts to make changes to the database.
-The deployment process should then automatically handle pushing these changes to the appropriate environments at designated times, with approvals from the appropriate parties.
+- Pulls source code that contains SQL scripts from version control.
+
+- Build a docker image that encapsulates SQL scripts along with the tool to run these scripts. 
+
+- Using that image, it spins up a container that runs the scripts against database in specified environment
 
 
+### Tools - SQL migration runner 
 
-If you are using Microsoft SQL Server, then Microsoft has a tool for you  [SQL Server Data Tools](https://visualstudio.microsoft.com/vs/features/ssdt/) 
+To help us manage database changes in a more systematic and reliable manner, we can let's rely on some tools.
+
+
+If you are using Microsoft SQL Server, then Microsoft has [a tool for you](https://visualstudio.microsoft.com/vs/features/ssdt/) 
 to automate this process. However, this tool is Microsoft specific. 
 
-Is there a more generic version of this that is tech stack agnostic?
+There are options that are more tech stack agnostic.
 
 One such option is the [Grate - SQL scripts migration runner](https://erikbra.github.io/grate/). 
 
-Since this tool just executes SQL scripts, you can use it to deploy to variety of database. 
+This tool just executes SQL scripts, hence you can use it to deploy to variety of database. 
 
-I was able to use Grate on a couple of projects that included PostgreSQL and MySQL databases.
+I was able to use Grate on a couple of projects that include PostgreSQL and MySQL databases.
 
 
-### Data Migration workflow
-
-After the SQL scripts are committed and pushed, we manually trigger a build of the pipeline called DataMigrations.
-
-#### CI/CD pipeline process
-
-Azure pipeline does the following:
-
-Pull source from specified branch (that includes new SQL scripts)
-
-Build an docker image. This image has everything we need to run data migration. It includes the grate tool along with the scripts that need to run.
-
-Runs the scripts against database in specified environment
 
 ## Grate
 
 Using a tool called grate, we can run scripts in a controlled manner. Here is a post that describes how grate processes scripts.
 
 In the "deploy" step of the Data Migration pipeline, the grate tool looks at folder that contains scripts and runs the scripts that haven't been run already.
-
-
 
 Once it runs the scripts, it also updates the version of the database.
 
