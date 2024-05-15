@@ -22,7 +22,7 @@ It would be beneficial to have a process that systematically answers all these q
 and relieves you of the mundane tasks, freeing you up for more engaging activities.
 
 
-## Overview of the process
+### Overview of the process
 
 At a high level, the process is:
 
@@ -46,6 +46,14 @@ associated with the change can be beneficial. This practice further helps clarif
 Once this is done, anyone can look at version control history and figure out why this change was there.
 This helpful not just for SQL scripts but for any code that effects application or infrastructure. 
 
+It's a good idea to place database-related files in a dedicated project or folder. 
+For instance, I created a separate project called DataMigrations. 
+
+![](data-migration-project-structure.jpg)
+
+That project contains the folders where scripts will be added. 
+It also includes the Azure Pipeline and Docker definitions that help us automate this process.
+
 ### CI/CD Pipeline
 
 After the SQL scripts are pushed to version control,
@@ -61,11 +69,10 @@ Pipeline does the following:
 
 Here is a sample definition of a pipeline that builds the image and deploys it to different environments.
 
-It uses KeyVault to get database connection. 
-
-It also uses a template for a common deployment part. 
-
 ```yaml
+#
+# CI/CD pipeline 
+#
 trigger: none
 
 resources:
@@ -151,10 +158,14 @@ stages:
 
 
 ```
+ 
+Note that this pipeline uses a template `deploy-template.yaml` for a common deployment part.
+Here is the definition of the template used in the main pipeline definition.    
 
-Here is the definition of the 'deploy-template' used in the main pipeline definition
 ```yaml
-
+#
+# deployment-template
+#
 parameters:
   - name: keyVaultName
     type: string
@@ -229,6 +240,9 @@ The following is an example of a Dockerfile definition that
 copies SQL scripts, installs and runs the Grate tool against specified database. 
 
 ```dockerfile
+#
+# Dockerfile that installs and executes SQL scripts against specified datbase using Grate tool
+#
 FROM erikbra/grate:1.6.1 as migrations
 
 WORKDIR /app
