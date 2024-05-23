@@ -3,7 +3,8 @@ title = 'Database Change Management'
 date = 2024-05-23T05:37:06-05:00
 featured_image = 'azure-ci-cd-grate.png'
 draft = false 
-toc = true  
+toc = true
+tags = ["ci-cd", "azure", "database", "postgres", "docker", "git", "yaml"]
 +++
 
 So, you have database changes—either schema or data changes—that need to be implemented and rolled out across various environments.

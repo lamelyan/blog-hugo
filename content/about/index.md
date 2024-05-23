@@ -42,7 +42,7 @@ HTML
 **DevOps:** 
 [Azure](../tags/azure), 
 Amazon Web Services, 
-[CI/CD](../tags/ci-cd/) using Azure Pipelines or GitHub Actions (using YAML), 
+[CI/CD](../tags/ci-cd/) using Azure Pipelines or GitHub Actions using [YAML](../tags/yaml), 
 [Docker](../tags/docker/), 
 [Git](../tags/git)
 
