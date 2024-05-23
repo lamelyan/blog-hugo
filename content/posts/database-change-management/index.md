@@ -1,6 +1,6 @@
 +++
 title = 'Database Change Management'
-date = 2024-05-07T15:37:06-05:00
+date = 2024-05-23T05:37:06-05:00
 featured_image = 'azure-ci-cd-grate.png'
 draft = false 
 toc = true  
@@ -270,6 +270,23 @@ ENTRYPOINT ./grate \
     --silent \
     --outputPath=./migration_output
 ```
+
+### Result
+
+After running the CI/CD pipeline in Azure DevOps, we see the following:
+
+
+![](pipeline-status.jpg)
+
+- The _version_ of the database that was released.
+- The _environment_ where these changes were released.
+ 
+ By using version control along with a CI/CD pipeline,
+ we gain visibility into which changes are deployed in which environment, 
+ along with enhanced change tracking, automation, and a comprehensive audit trail of changes.
+
+
+
 
 
 
