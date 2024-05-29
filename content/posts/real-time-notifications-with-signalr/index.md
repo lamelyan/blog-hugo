@@ -2,7 +2,7 @@
 title = 'Real-time notifications with SignalR'
 date = 2024-05-28T09:24:43-05:00
 draft = false 
-featured_image = 'feature-image.webp'
+featured_image = 'signalr-dotnet.jpg'
 toc = true
 tags = ["c#", "dot-net", "angular", "typescript"]
 +++
