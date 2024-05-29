@@ -1,10 +1,10 @@
 +++
 title = 'Real-time notifications with SignalR'
 date = 2024-05-28T09:24:43-05:00
-draft = true     
+draft = false 
 featured_image = 'feature-image.webp'
 toc = true
-tags = ["c#", "dot-net", "angular"]
+tags = ["c#", "dot-net", "angular", "typescript"]
 +++
 
 This post provides a detailed overview of setting up SignalR in a .NET Core application. 

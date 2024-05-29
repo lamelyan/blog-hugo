@@ -20,8 +20,8 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 
 
 **Back-end:** 
-C#, 
-.Net Core, 
+[C#](../tags/c#),
+[.Net Core](../tags/dot-net),
 Azure Functions, 
 REST API, 
 Azure Service Bus, 
@@ -32,8 +32,8 @@ Entity Framework,
 Dapper
 
 **Front-end:**
-Angular, 
-TypeScript, 
+[Angular](../tags/angular), 
+[TypeScript](../tags/typescript), 
 JavaScript, 
 CSS, 
 HTML
