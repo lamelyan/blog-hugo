@@ -7,13 +7,13 @@ toc = true
 tags = ["c#", "dot-net", "angular", "typescript"]
 +++
 
-This post provides a detailed overview of setting up SignalR in a .NET Core application. 
-In this example, we'll use a .NET Core API as the backend and Angular as the frontend.
-
 Using real-time communication with SignalR allows users to interact with the application 
 without needing to refresh the screen to get updates.
-We implemented this type of communication on dashboard pages that display workflow status details.
 
+This post provides a detailed overview of setting up SignalR in a .NET Core application.
+In this example, we'll use a .NET Core API as the backend and Angular as the frontend.
+
+We implemented this type of communication on dashboard pages that display workflow status details.
 
 
 ## Backend implementation 
@@ -37,7 +37,7 @@ app.UseEndpoints(endpoints =>
 ```
 
 Note the part `MapHub<NotificationsHub>` This isn't a regular REST API endpoint. 
-This endpoint allows us to create a persistent bi-directional connection(using a web socket) between the server and clients.
+This endpoint allows us to create a persistent bi-directional connection(using a WebSocket) between the server and clients.
 
 ### Notification Hub
 
@@ -112,10 +112,14 @@ By default, Azure AD will include user's id in the claim of type NameIdentifier.
 
 ### Authentication 
 
-To deliver real-time notifications, SignalR establishes a web socket connection.
+To deliver real-time notifications, SignalR establishes a connection.
 
-It's an authenticated connection and the authentication JWT token is sent as a query in URL.
-In Startup.cs, there is specific logic to read this token and add it to our context.
+Because of browser API limitation, when establishing connection via websocket,
+the JWT token needs to be sent in a query string.
+
+
+And because of that,  there is specific logic in Startup.cs to read this token and add it to our context.
+
 This allows us to read token information (such as claims) in order to get information about the user.
 
 ```csharp
@@ -146,7 +150,9 @@ static void ConfigureAuthenticationForSignalR(IServiceCollection services)
 
 ## Frontend integration
 
-We used Angular as frontend framework. 
+In this example we use Angular as frontend framework. 
+If you are using another frontend framework, Microsoft 
+has helper libraries for all different frontend frameworks.
 
 
 ### Start SignalR connection
@@ -175,6 +181,9 @@ We connect to the backend hub, like so:
     this.hubConnection.onclose(_ => console.log('SignalR - Disconnected.'));
 }
 ```
+
+For more details see [Microsoft docs here](https://learn.microsoft.com/en-us/aspnet/core/signalr/authn-and-authz?view=aspnetcore-8.0#bearer-token-authentication).
+
 
 
 ### Handle notification events
