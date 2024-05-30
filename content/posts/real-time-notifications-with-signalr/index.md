@@ -4,7 +4,7 @@ date = 2024-05-28T09:24:43-05:00
 draft = false 
 featured_image = 'signalr-dotnet.jpg'
 toc = true
-tags = ["c#", "dot-net", "angular", "typescript"]
+tags = ["csharp", "dot-net", "angular", "typescript"]
 +++
 
 Using real-time communication with SignalR allows users to interact with the application 

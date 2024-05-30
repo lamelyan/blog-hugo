@@ -20,7 +20,7 @@ I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/)
 
 
 **Back-end:** 
-[C#](../tags/c#),
+[C#](../tags/csharp),
 [.Net Core](../tags/dot-net),
 Azure Functions, 
 REST API, 
