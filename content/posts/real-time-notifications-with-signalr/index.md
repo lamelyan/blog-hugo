@@ -1,32 +1,32 @@
 +++
 title = 'Real-time notifications with SignalR'
-date = 2024-05-28T09:24:43-05:00
+date = 2024-06-10T09:24:43-05:00
 draft = false 
 featured_image = 'signalr-dotnet.jpg'
 toc = true
 tags = ["csharp", "dot-net", "angular", "typescript"]
 +++
 
-Using real-time communication with SignalR allows users to interact with the application 
-without needing to refresh the screen to get updates.
+Using real-time communication with SignalR allows users to interact with the application without needing to refresh the screen to get updates.
 
-This post provides a detailed overview of setting up SignalR in a .NET Core application.
-In this example, we'll use a .NET Core API as the backend and Angular as the frontend.
+This post provides an overview of setting up SignalR in a .NET Core application. In this example, we’ll use a .NET Core API as the backend and Angular as the frontend.
 
-We implemented this type of communication on dashboard pages that display workflow status details.
-
+We implemented this type of communication on dashboard pages to display workflow status details.
 
 ## Backend implementation 
 
 ### .NET Core API
 
-SignalR is injected at Startup  
+After you include [SignalR package](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client#readme-body-tab) 
+in your project, register it during startup.
+
+
 
 ```csharp
 services.AddSignalR(config => config.EnableDetailedErrors = true)
 ```
 
-A special 'hub' endpoint is configured to send out notifications
+Configure a 'hub' endpoint that is used to send out notifications
 
 ```csharp
 app.UseEndpoints(endpoints =>
@@ -69,18 +69,18 @@ await _hubContext.Clients.Users(AzureActiveDirectoryId).SendAsync("UserNotificat
 
 
 Note the first parameter to the SendAsync method - "UserNotification".
-This is the name of a javascript function that will be invoked on the client.  
-In our Angular app, we have a function with the name - UserNotification - that handles 
-the notification object passed to it.
+This is the name of a javascript function that will be invoked on the client. In our Angular app, 
+we have a function with the name - UserNotification - that handles the notification object passed to it.
 
 
 Also, note, that notifications are filtered to go to clients (browsers or other apps) that have specific id. 
 
 ### How does SignalR know about who is connected? 
 
-When the frontend app connects to the backend, it passes an identifier (using JWT token). 
-To get this identifier, we implement IUserIdProvider interface. 
-In it, we define what identifies a user. In our case, it's the id that is stored in a claim of JWT token.
+When the frontend app connects to the backend, it passes an identifier using a JWT token. 
+To retrieve this identifier, we implement the IUserIdProvider interface. 
+This interface allows us to define what identifies a user. 
+In our case, it's the ID stored in a claim of the JWT token.
 
 ```csharp
 public class SignalrUserIdProvider : IUserIdProvider
@@ -101,26 +101,22 @@ public class SignalrUserIdProvider : IUserIdProvider
 }
 ```
 
-Once implemented, this provider SignalrUserProvider is wired up at a startup.
+Once implemented, SignalrUserProvider is registered at start up.
 
 ```csharp
 services.AddSingleton<IUserIdProvider, SignalrUserIdProvider>();
 ```
 
-By default, Azure AD will include user's id in the claim of type NameIdentifier. 
+
+By default, Azure AD includes user's id in the claim - NameIdentifier. 
 
 
-### Authentication 
+### Browser limitation workaround
 
-To deliver real-time notifications, SignalR establishes a connection.
-
-Because of browser API limitation, when establishing connection via websocket,
-the JWT token needs to be sent in a query string.
-
-
-And because of that,  there is specific logic in Startup.cs to read this token and add it to our context.
-
-This allows us to read token information (such as claims) in order to get information about the user.
+Due to browser API limitations, when establishing a connection via a WebSocket, 
+the JWT token needs to be sent in a query string. Therefore, we need to add special logic in Startup.cs 
+to read this token and add it to our context. This allows us to access token 
+information (such as claims) to obtain details about the user.
 
 ```csharp
 static void ConfigureAuthenticationForSignalR(IServiceCollection services)
