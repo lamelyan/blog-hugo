@@ -1,6 +1,6 @@
 +++
 title = 'Real-time notifications with SignalR'
-date = 2024-06-10T09:24:43-05:00
+date = 2024-06-12T02:24:43-05:00
 draft = false 
 featured_image = 'signalr-dotnet.jpg'
 toc = true
@@ -153,10 +153,10 @@ has helper libraries for all different frontend frameworks.
 
 ### Start SignalR connection
 
-Microsoft has [@azure/msal-angular](https://github.com/AzureAD/microsoft-authentication-library-for-js#readme) 
+Microsoft offers [@azure/msal-angular](https://github.com/AzureAD/microsoft-authentication-library-for-js#readme) 
 package to assist us with Azure Active Directory B2C sign-in.
 
-We connect to the backend hub, like so:
+Using the msal-angular library, we can connect to the backend hub:
 
 
 
@@ -184,7 +184,11 @@ For more details see [Microsoft docs here](https://learn.microsoft.com/en-us/asp
 
 ### Handle notification events
 
-Create a helper method that starts a connection and listens to a specific event.
+On the client side, we listen to events coming from the backend.
+The event will pass an object with data that we can use to update the UI. 
+
+To achieve this, create a helper method that starts a connection and listens for a specific event.
+
 
 ```typescript
   listenForEvent<T>(eventName, token): Observable<T> {
@@ -195,7 +199,7 @@ Create a helper method that starts a connection and listens to a specific event.
 }
 ```
 
-Here is a sample method that listens for UserNotification event:
+Then you can listen for specific event and process event data. 
 
 ```typescript
 private listenForUserNotifications() {
@@ -205,3 +209,16 @@ private listenForUserNotifications() {
         finalize(() => console.log(`%cUnsubscribed from UserNotification`, 'color:yellow; background-color:seagreen')));
 }
 ```
+
+### Conclusion
+In summary, by using SignalR libraries on both the client and server sides, 
+we establish a WebSocket connection. It's essential to ensure that the authentication 
+token is passed if the connection requires authentication. One particular gotcha is passing 
+the token in the query string, which can be a security concern since some loggers will log queries.
+
+Additionally, if SignalR cannot open a WebSocket, it falls back to polling. 
+This convenient feature can also cause bugs to slip through the cracks since 
+it’s not always obvious that things aren't working as expected. 
+Therefore, make sure to have your web developer console open and check for errors as you test. 😉
+
+
