@@ -1,9 +1,9 @@
 +++
 title = 'Reach out for guidance'
-date = 2024-06-17T02:24:43-05:00
-draft = true 
+date = 2024-06-20T02:24:43-05:00
+draft = false  
 featured_image = 'guidance.jpeg'
-tags = []   
+tags = ["thoughts", "ideas"]   
 +++
 
 People in the tech industry are often criticized for their lack of "soft skills."
@@ -21,8 +21,14 @@ succeed with their product, or maybe they're just generally helpful.
 
 In any case, it's surprising how often key contributors to open-source 
 projects respond, and usually quite promptly. Shoutout to 
-[Oscar Dudycz](https://event-driven.io/en/) and [Jeremy Miller](https://jeremydmiller.com/)
-
+[Oscar Dudycz](https://event-driven.io/en/) and [Jeremy Miller](https://jeremydmiller.com/). 
 While at first reluctant to ask these guys questions on GitHub or Discord, thinking "I'm not worthy" of taking up their time, they took their time and guided me to a solution.
 
 Moral of the story: Don't be afraid to reach out for guidance. Look for the project's GitHub page and ask there. Create an issue, or check if they have a Discussion section. Some more ambitious projects even have a Discord channel.
+
+
+> “Most people never pick up the phone and call. Most people never ask, and that’s what separates the people who do things from the people who just dream about them.” 
+
+
+
+{{< youtube zkTf0LmDqKI >}}
