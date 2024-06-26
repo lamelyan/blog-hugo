@@ -1,19 +1,59 @@
 +++
 title = 'Self Hosted Build Agent'
-date = 2024-04-22T09:24:43-05:00
+date = 2024-06-21T01:24:43-05:00
 draft = true 
 featured_image = 'conventional-commits.jpg'
 toc = true
 +++
 
+## What is a build agent?
 
-# Why would you want to host your build agent?
+Let's start out with nomenclature.  
 
-Azure DevOps hosted agents might not have enough resources to run the tests.
-The tests for the front-end Angular application in particular can be memory intensive.
-On the project that I worked on, these end-to-end tests were not able to run on the default build agent.
-The test would reach the agent timeout of 60 minutes and never complete.
-We had to set up a self-hosted agent on a machine that has enough memory to finish running all the tests. 
+A build agent in DevOps world is a dedicated machine (or a most likely a docker container)
+that runs your build/deploy commands for you in the "cloud" (Azure or AWS). 
 
 
+Microsoft provides you with their hosted agent
+that comes [pre-configured with software](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software).
 
+For more information [see Microsoft's documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=yaml%2Cbrowser)
+
+
+## Why would you want to host your own build agent?
+
+There a [number of reasons](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#capabilities-and-limitations) 
+why you would want to host your own agent.
+On the project I worked on, hardware specs were insuficient for worklaod.
+
+At present moment Microsoft-hosted agent 
+is provisioned with 2 core CPU, 7 GB of RAM, and 14 GB of SSD disk space,
+see [more details here](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#hardware).
+
+
+For small projects that don't require many resources this might be sufficient. 
+However, for projects that involve more process-intensive tasks, the hosted agent configuration most
+likely won't suffice.
+
+
+An example of a process-intensive task is running tests for a front-end Angular application. This task,
+in particular, can be memory-intensive. End-to-end tests that run with Cypress are another example. These tests are both CPU and memory-intensive.
+
+On our project, the end-to-end tests were not able to complete in the alloted time.
+The pipeline would reach the timeout of 60 minutes.  
+
+This is why we chose to set up a self-hosted agent on a machine with enough memory to 
+finish running the tests.
+
+
+## Set up agent
+
+
+You can set up a virtual machine that will run your agent.
+
+The virtual machine doesn't have the agent running by default 
+however there is an extension that Microsoft provides. 
+Enable that extension and you have a build agent running on your virtual machine.
+
+
+https://learn.microsoft.com/en-us/gaming/azure/reference-architectures/azurecloudbuilds-4-buildagent
