@@ -2,7 +2,7 @@
 title = 'Self Hosted Build Agent'
 date = 2024-06-21T01:24:43-05:00
 draft = true 
-featured_image = 'conventional-commits.jpg'
+featured_image = 'cover.jpg'
 toc = true
 +++
 
