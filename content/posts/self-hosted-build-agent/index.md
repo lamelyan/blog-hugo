@@ -2,8 +2,9 @@
 title = 'Self Hosted Build Agent'
 date = 2024-06-21T01:24:43-05:00
 draft = true 
-featured_image = 'cover.jpg'
+featured_image = 'devops-azure-side-by-side.jpg'
 toc = true
+tags = ['ci-cd', 'azure', 'yaml']
 +++
 
 ## What is a build agent?
@@ -48,12 +49,25 @@ finish running the tests.
 
 ## Set up agent
 
-
-You can set up a virtual machine that will run your agent.
-
 The virtual machine doesn't have the agent running by default 
 however there is an extension that Microsoft provides. 
 Enable that extension and you have a build agent running on your virtual machine.
 
 
 https://learn.microsoft.com/en-us/gaming/azure/reference-architectures/azurecloudbuilds-4-buildagent
+
+## Configure Azure to use newly created agent
+
+Create a new agent pool
+![agent-pool-create.png](agent-pool-create.png)
+
+Configure agent pool
+![agent-pool-configure.png](agent-pool-configure.png)
+
+Once configured you should see agents being utilized.
+![devops-azure-side-by-side.jpg](devops-azure-side-by-side.jpg)
+
+## Configure your builds to use the new agent pool
+
+In your CI/CD config, set the agent pool
+![pipeline-set-agent-pool.png](pipeline-set-agent-pool.png)
