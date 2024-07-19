@@ -1,5 +1,5 @@
 +++
-title = 'Self Hosted Build Agent'
+title = 'Self Hosted Build Agent for CI/CD pipeline'
 date = 2024-06-21T01:24:43-05:00
 draft = true 
 featured_image = 'devops-azure-side-by-side.jpg'
@@ -7,25 +7,45 @@ toc = true
 tags = ['ci-cd', 'azure', 'yaml']
 +++
 
-## What is a build agent?
+# Context
 
-Let's start out with nomenclature.  
+So you have a typical project with a backend API and a frontend app built with React or Angular. 
+You want to ensure that every time you push changes to production, they are thoroughly tested and 
+deployed. To achieve this, you set up a CI/CD pipeline that handles the building, testing, and 
+deployment processes automatically.
+
+At first, everything works smoothly, but as your project grows, you notice the pipeline is taking 
+longer to complete. Eventually, it might even timeout. Why is this happening, and how can it be fixed?
+
+## Nomenclature
+
+Let's start out with nomenclature.
+
+### What is a pipeline?
+
+A CI/CD pipeline is a process that automates the steps of software development, from writing
+code to deploying it to production, ensuring new code changes are automatically tested and 
+integrated for reliable and faster updates. This pipeline is created by writing scripts or 
+configuration files that define the steps for building, testing, and deploying code, which 
+are then executed by CI/CD tools like Jenkins, GitHub Actions, or Azure Pipelines.
+
+### What is a build agent?
 
 A build agent in DevOps world is a dedicated machine (or a most likely a docker container)
-that runs your build/deploy commands for you in the "cloud" (Azure or AWS). 
-
-
-Microsoft provides you with their hosted agent
-that comes [pre-configured with software](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software).
-
-For more information [see Microsoft's documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents?view=azure-devops&tabs=yaml%2Cbrowser)
+that runs before mentioned scripts that build, test and deploy your application. 
 
 
 ## Why would you want to host your own build agent?
 
-There a [number of reasons](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#capabilities-and-limitations) 
-why you would want to host your own agent.
-On the project I worked on, hardware specs were insuficient for worklaod.
+Build agents can become a bottleneck, as their performance directly affects the speed of the entire pipeline.
+
+Microsoft provides you with their hosted agents that come with
+[pre-configured](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#software) software.
+
+
+There are [several reasons](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#capabilities-and-limitations)
+to host your own agent, and in a project I worked on, the hardware specs
+of hosted agents were insufficient for our workload.
 
 At present moment Microsoft-hosted agent 
 is provisioned with 2 core CPU, 7 GB of RAM, and 14 GB of SSD disk space,
@@ -47,7 +67,9 @@ This is why we chose to set up a self-hosted agent on a machine with enough memo
 finish running the tests.
 
 
-## Set up agent
+## Set up self-hosted agent
+
+
 
 The virtual machine doesn't have the agent running by default 
 however there is an extension that Microsoft provides. 
