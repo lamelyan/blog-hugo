@@ -58,38 +58,45 @@ likely won't suffice.
 
 
 An example of a process-intensive task is running tests for a front-end Angular application. This task,
-in particular, can be memory-intensive. End-to-end tests that run with Cypress are another example. These tests are both CPU and memory-intensive.
+in particular, can be memory-intensive. End-to-end tests that run with[Blog.yaml](..%2F..%2F..%2F..%2F..%2F.warp%2Flaunch_configurations%2FBlog.yaml) Cypress are another example. These tests are both CPU and memory-intensive.
 
 On our project, the end-to-end tests were not able to complete in the alloted time.
 The pipeline would reach the timeout of 60 minutes.  
 
 This is why we chose to set up a self-hosted agent on a machine with enough memory to 
-finish running the tests.
+finish running the tests.[warp config.yaml](..%2F..%2F..%2F..%2F..%2F.warp%2Flaunch_configurations%2Fwarp%20config.yaml)
 
 
-## Set up self-hosted agent
+## Set up VMs that run your agent
+
+As for setting up an agent, you can either spin up a single virtual machine or use a virtual machine 
+scale set([VMSS](https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/scale-set-agents?view=azure-devops)).
+The latter will scale up with demand, making it a good choice if you have multiple CI/CD 
+jobs that need to run simultaneously. Of course, you need to consider the cost of a scale set versus a single machine.
+
+Once you have your VM or VMSS, you need to get the agent software running on the machine. 
+Virtual machines do not have the agent running by default. However, Microsoft provides an 
+extension for this purpose. Just enable the extension, and you will have a build agent running on your virtual machine.
+![vmss-extension](vmss-extension.jpg)
 
 
 
-The virtual machine doesn't have the agent running by default 
-however there is an extension that Microsoft provides. 
-Enable that extension and you have a build agent running on your virtual machine.
+## Connect VMs to Azure DevOps
 
+Now that you have your virtual machines up and running, it's time to
+configure Azure DevOps to use them in CI/CD pipeline. 
 
-https://learn.microsoft.com/en-us/gaming/azure/reference-architectures/azurecloudbuilds-4-buildagent
-
-## Configure Azure to use newly created agent
-
-Create a new agent pool
+First step is to create a new "Agent Pool"
 ![agent-pool-create.png](agent-pool-create.png)
 
-Configure agent pool
+In the newly created agent pool, connect to the virtual machines that you created. 
 ![agent-pool-configure.png](agent-pool-configure.png)
 
-Once configured you should see agents being utilized.
+## Use the new agent pool in your CI/CD builds
+
+To use the newly created agent, set the agent pool, in your CI/CD configuration.
+![pipeline-set-agent-pool.png](pipeline-set-agent-pool.png)
+
+Now when you run the CI/CD pipeline, you should see agents being utilized.
 ![devops-azure-side-by-side.jpg](devops-azure-side-by-side.jpg)
 
-## Configure your builds to use the new agent pool
-
-In your CI/CD config, set the agent pool
-![pipeline-set-agent-pool.png](pipeline-set-agent-pool.png)
