@@ -32,8 +32,10 @@ are then executed by CI/CD tools like Jenkins, GitHub Actions, or Azure Pipeline
 ### What is a build agent?
 
 A build agent in DevOps world is a dedicated machine (or a most likely a docker container)
-that runs before mentioned scripts that build, test and deploy your application. 
+that runs before mentioned scripts that build, test and deploy your application.
 
+If you are curious and want to look under the hood, you can explore the [documentation
+and source code](https://github.com/microsoft/azure-pipelines-agent/tree/master/docs) of the Azure Pipeline Agent.
 
 ## Why would you want to host your own build agent?
 
@@ -99,4 +101,7 @@ To use the newly created agent, set the agent pool, in your CI/CD configuration.
 
 Now when you run the CI/CD pipeline, you should see agents being utilized.
 ![devops-azure-side-by-side.jpg](devops-azure-side-by-side.jpg)
+
+
+
 
