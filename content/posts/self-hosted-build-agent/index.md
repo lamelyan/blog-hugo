@@ -1,5 +1,5 @@
 +++
-title = 'Self Hosted Build Agent for CI/CD pipeline'
+title = 'Self-hosted Build Agent for CI/CD pipeline'
 date = 2024-07-25T01:24:43-05:00
 featured_image = 'devops-azure-side-by-side.jpg'
 toc = true
