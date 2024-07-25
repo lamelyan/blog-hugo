@@ -1,7 +1,6 @@
 +++
 title = 'Self Hosted Build Agent for CI/CD pipeline'
-date = 2024-06-21T01:24:43-05:00
-draft = true 
+date = 2024-07-25T01:24:43-05:00
 featured_image = 'devops-azure-side-by-side.jpg'
 toc = true
 tags = ['ci-cd', 'azure', 'yaml']
@@ -60,13 +59,13 @@ likely won't suffice.
 
 
 An example of a process-intensive task is running tests for a front-end Angular application. This task,
-in particular, can be memory-intensive. End-to-end tests that run with[Blog.yaml](..%2F..%2F..%2F..%2F..%2F.warp%2Flaunch_configurations%2FBlog.yaml) Cypress are another example. These tests are both CPU and memory-intensive.
+in particular, can be memory-intensive. End-to-end tests that run with Cypress are another example. These tests are both CPU and memory-intensive.
 
 On our project, the end-to-end tests were not able to complete in the alloted time.
 The pipeline would reach the timeout of 60 minutes.  
 
 This is why we chose to set up a self-hosted agent on a machine with enough memory to 
-finish running the tests.[warp config.yaml](..%2F..%2F..%2F..%2F..%2F.warp%2Flaunch_configurations%2Fwarp%20config.yaml)
+finish running the tests.
 
 
 ## Set up VMs that run your agent
