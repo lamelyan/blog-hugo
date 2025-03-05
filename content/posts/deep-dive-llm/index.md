@@ -7,7 +7,7 @@ toc = true
 tags = ["ai"]
 +++
 
-Currently enjoying in depth tutorial about how LLMs work. 
+Currently enjoying an in-depth tutorial about how LLMs work.
 
 'Deep Dive into LLMs like ChatGPT by Andrej Karpathy'
 
