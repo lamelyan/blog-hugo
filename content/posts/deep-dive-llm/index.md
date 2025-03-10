@@ -9,136 +9,140 @@ tags = ["ai"]
 
 Currently enjoying an in-depth tutorial about how LLMs work.
 
-'Deep Dive into LLMs like ChatGPT by Andrej Karpathy'
-
+**"Deep Dive into LLMs like ChatGPT by Andrej Karpathy"**
 
 {{< youtube 7xTGNNLPyMI >}}
 
-# Breakdown of the Video: Understanding LLMs
+# Breakdown: Understanding LLMs
 
 ## 1. [Introduction (0:00 - 1:04)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=0s)
 
 ### What are LLMs?
-The video starts by explaining what large language models (LLMs) are, highlighting their capabilities and limitations. It also sets the goal of the video: to provide a comprehensive understanding of LLMs for a general audience.
+Karpathy begins by explaining what large language models (LLMs) are, highlighting their capabilities and limitations. He also sets the goal of the session: to provide a comprehensive understanding of LLMs for a general audience.
 
 ---
 
 ## 2. [Pre-training Stage (1:04 - 2:52)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=64s)
 
 - **Downloading and processing the internet**  
-  This section focuses on the first stage of LLM training: pre-training. It explains the process of collecting massive amounts of text data from the internet and cleaning it for use in training.
+  This part explores how massive amounts of text data are collected from the internet and cleaned for model training.
 
 - **The FineWeb data set**  
-  The video uses the FineWeb data set as a real-world example to demonstrate the scale and complexity of collecting and preparing web data for LLM training.
+  Karpathy uses the FineWeb data set to demonstrate the scale and complexity of preparing web data.
 
 - **Tokenization**  
-  The concept of tokenization is introduced, explaining how text is broken down into smaller units (tokens) for the model to process.
+  Tokenization is introduced as the process of breaking text into smaller units (tokens) that the model can process.
 
 ---
 
 ## 3. [Building the Base Model (2:53 - 43:07)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=173s)
 
 - **Training on tokens**  
-  The video illustrates how the model learns to predict the next token in a sequence, using a simplified example of predicting the next letter in a word.
+  Karpathy illustrates how the model learns to predict the next token in a sequence using simple word prediction examples.
 
 - **Neural network architecture**  
-  It introduces the transformer architecture, a type of neural network commonly used for LLMs, and explains how it works.
+  He introduces the transformer architecture and explains how it powers modern LLMs.
 
 - **The base model**  
-  This section highlights the importance of the base model as an internet text simulator, capable of generating realistic text but not yet able to respond to questions.
+  This part highlights how the base model becomes an internet text simulator—able to generate realistic text, but not yet able to respond meaningfully to queries.
 
 ---
 
 ## 4. [Supervised Fine-Tuning (SFT) (43:07 - 1:15:00)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=2587s)
 
 - **Turning the base model into an assistant**  
-  This section delves into the second stage of LLM training: supervised fine-tuning. It explains how the base model is trained on a dataset of conversations to become a helpful, informative assistant.
+  Karpathy explains how supervised fine-tuning helps shape the model into a helpful assistant by training it on curated conversations.
 
 - **Human labelers**  
-  The importance of human labelers in creating high-quality conversations for training is emphasized.
+  The role of human annotators is emphasized in creating high-quality training data.
 
 - **Conversation encoding**  
-  The video explains how conversations are represented as sequences of tokens for the model to process.
+  Conversations are represented as token sequences, allowing the model to learn from them.
 
 - **Programming by example**  
-  The concept of programming the model through examples is discussed, illustrating how the model learns to emulate the behavior of human labelers.
+  The model learns by example, emulating the responses provided by human labelers.
 
 ---
 
 ## 5. [LLM Psychology (1:15:00 - 1:40:01)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=4500s)
 
 - **Hallucinations**  
-  This section explores the concept of hallucinations, where LLMs generate incorrect information, and explains the reasons behind them.
+  Karpathy dives into hallucinations—cases where LLMs generate incorrect info—and explains the root causes.
 
 - **The knowledge of self**  
-  The video discusses the limitations of LLMs in understanding their own existence or identity.
+  He discusses the model’s lack of true self-awareness or identity.
 
 - **Context windows**  
-  The importance of context windows for LLMs to access recent information is highlighted, and it's explained how this works like our own working memory.
+  The concept of a context window is compared to human working memory, helping to explain how LLMs retain relevant information.
 
 ---
 
 ## 6. [Reinforcement Learning (RL) (1:40:01 - 2:14:20)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=6001s)
 
 - **Improving LLMs' abilities**  
-  This section introduces reinforcement learning (RL), the third stage of LLM training, and explains how it helps to improve the model's ability to solve complex tasks.
+  Karpathy introduces reinforcement learning as the third stage of LLM training, used to sharpen model performance.
 
 - **School analogy**  
-  The video uses the analogy of going to school to help illustrate how RL works.
+  He compares this process to a student going to school and being graded.
 
 - **Emergent properties**  
-  The video highlights how RL can lead to unexpected capabilities and strategies in LLMs.
+  He highlights surprising and complex behaviors that can emerge from RL-based training.
 
 ---
 
 ## 7. [Summary and Future Capabilities (2:14:20 - 3:15:05)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=8060s)
 
 - **The three stages of LLM training**  
-  The video summarizes the three stages of LLM training: pre-training, supervised fine-tuning, and reinforcement learning.
+  A summary of the full LLM training lifecycle: pre-training, supervised fine-tuning, and reinforcement learning.
 
 - **Multimodality**  
-  The video discusses the future of LLMs in handling multiple modalities (text, audio, images), enabling them to engage in more natural conversations.
+  Karpathy discusses how future LLMs will handle multiple data types—text, audio, images—for richer interaction.
 
 - **Agents**  
-  The concept of agents, LLMs that can perform tasks over extended periods, is introduced.
+  He introduces the idea of persistent LLM agents capable of working over longer timeframes.
 
 ---
 
 ## 8. [Resources (3:15:05 - 3:21:43)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=11705s)
 
 - **LM leaderboard (Hugging Face)**  
-  The video suggests resources for staying up-to-date on LLM research and development, including the Hugging Face leaderboard.
+  Karpathy recommends Hugging Face’s leaderboard for tracking LLM performance.
 
 - **LM Studio**  
-  Another resource, LM Studio, is highlighted as a platform where users can interact with and run LLMs locally on their computers.
+  A local app that lets users explore and experiment with LLMs.
 
 ---
 
 ## 9. [Conclusion (3:21:43 - 3:31:10)](https://www.youtube.com/watch?v=7xTGNNLPyMI&t=12043s)
 
 - **Using LLMs as tools**  
-  The video concludes by emphasizing the importance of using LLMs as tools, recognizing their limitations, and verifying their outputs.
+  Karpathy closes by emphasizing responsible use of LLMs—understanding their limits and verifying their outputs.
 
+---
 
-# Tools & Resources Mentioned in the Video
+# Tools & Resources Mentioned
 
 - **Hugging Face** ([1:16](https://youtu.be/7xTGNNLPyMI?t=76), [6:10](https://youtu.be/7xTGNNLPyMI?t=370))  
-  The video mentions Hugging Face as a resource for accessing a dataset called Fine Web and exploring LLMs. You can find it by searching "Hugging Face" on your web browser.
+  Access datasets and explore LLMs.
 
 - **Common Crawl** ([2:52](https://youtu.be/7xTGNNLPyMI?t=172))  
-  This is another resource mentioned in the video. You can find it by searching for "Common Crawl" on your web browser.
+  Massive internet text archive for training data.
 
 - **Tick Tokenizer** ([12:15](https://youtu.be/7xTGNNLPyMI?t=735))  
-  This website allows you to explore different tokenizer representations. You can find it by searching "Tick Tokenizer" on your web browser.
+  Explore token representations of text.
 
 - **Hyperbolic** ([46:57](https://youtu.be/7xTGNNLPyMI?t=2817))  
-  This is a website that allows you to interact with the Llama 3 base model. You can find it by searching for "Hyperbolic Llama 3" on your web browser.
+  Interface for experimenting with Llama 3 models.
 
 - **Together.ai** ([2:36:12](https://youtu.be/7xTGNNLPyMI?t=9372))  
-  This is a company that hosts a variety of state-of-the-art LLMs, including DeepSeek R1. You can find it by searching for "Together.ai DeepSeek" on your web browser.
+  Hosts various state-of-the-art LLMs, including DeepSeek R1.
 
 - **El Marina** ([3:15:15](https://youtu.be/7xTGNNLPyMI?t=11715))  
-  This is a website that ranks different LLMs based on human comparisons. You can find it by searching "El Marina" on your web browser.
+  Human comparison rankings of LLMs.
 
 - **LM Studio** ([3:20:35](https://youtu.be/7xTGNNLPyMI?t=12035))  
-  This is an app that allows you to explore and interact with a variety of LLMs. You can find it by searching "LM Studio" on your web browser.
+  A tool for running and interacting with LLMs locally.
+
+---
+
+If you're diving into LLMs or just curious about how tools like ChatGPT work under the hood, **Karpathy’s breakdown is one of the clearest and most accessible resources out there**.
