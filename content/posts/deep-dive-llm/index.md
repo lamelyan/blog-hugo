@@ -119,3 +119,26 @@ The video starts by explaining what large language models (LLMs) are, highlighti
 - **Using LLMs as tools**  
   The video concludes by emphasizing the importance of using LLMs as tools, recognizing their limitations, and verifying their outputs.
 
+
+# Tools & Resources Mentioned in the Video
+
+- **Hugging Face** ([1:16](https://youtu.be/7xTGNNLPyMI?t=76), [6:10](https://youtu.be/7xTGNNLPyMI?t=370))  
+  The video mentions Hugging Face as a resource for accessing a dataset called Fine Web and exploring LLMs. You can find it by searching "Hugging Face" on your web browser.
+
+- **Common Crawl** ([2:52](https://youtu.be/7xTGNNLPyMI?t=172))  
+  This is another resource mentioned in the video. You can find it by searching for "Common Crawl" on your web browser.
+
+- **Tick Tokenizer** ([12:15](https://youtu.be/7xTGNNLPyMI?t=735))  
+  This website allows you to explore different tokenizer representations. You can find it by searching "Tick Tokenizer" on your web browser.
+
+- **Hyperbolic** ([46:57](https://youtu.be/7xTGNNLPyMI?t=2817))  
+  This is a website that allows you to interact with the Llama 3 base model. You can find it by searching for "Hyperbolic Llama 3" on your web browser.
+
+- **Together.ai** ([2:36:12](https://youtu.be/7xTGNNLPyMI?t=9372))  
+  This is a company that hosts a variety of state-of-the-art LLMs, including DeepSeek R1. You can find it by searching for "Together.ai DeepSeek" on your web browser.
+
+- **El Marina** ([3:15:15](https://youtu.be/7xTGNNLPyMI?t=11715))  
+  This is a website that ranks different LLMs based on human comparisons. You can find it by searching "El Marina" on your web browser.
+
+- **LM Studio** ([3:20:35](https://youtu.be/7xTGNNLPyMI?t=12035))  
+  This is an app that allows you to explore and interact with a variety of LLMs. You can find it by searching "LM Studio" on your web browser.
