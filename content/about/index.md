@@ -9,12 +9,16 @@ menu:
 
 I'm Leo Amelyan, a Senior Consultant at  [Improving](https://www.improving.com/) with 20+ years of experience in software development, project management, and entrepreneurship.
 
+Currently, exploring and learning about [AI](../tags/ai), large language models ([LLMs](../tags/llm)), and their real-world applications.
+
 ## Expertise Highlights
- Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
 
- Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
+Proficient in the full software lifecycle with a focus on agile methodologies like Scrum.
 
- Extensive experience in diverse projects, including ERP systems, CRM systems, content management systems, and automation processes.
+Skilled in object-oriented programming and test-driven development, adhering to SOLID design principles.
+
+Extensive experience in diverse projects, including ERP systems, CRM systems, content management systems, and automation processes.
+
 
 ### Technical Proficiency
 

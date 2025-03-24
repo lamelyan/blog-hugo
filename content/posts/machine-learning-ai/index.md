@@ -3,7 +3,7 @@ title = 'Machine Learning and AI'
 date = 2024-04-20T07:24:58-05:00
 featured_image = 'machine-learning-overview.jpg'
 toc = true
-tags = ["ai", "machine-learning"]
+tags = ["ai", "machine-learning", "llm"]
 +++
 
 Earlier this week, I participated in a [two-day, hands-on introductory
