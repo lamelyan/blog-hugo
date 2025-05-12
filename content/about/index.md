@@ -85,16 +85,4 @@ What others say:
 > 
 > ~ Jonathan Ulfeng
 
-## My path
-As a freshman in college, I was uncertain about my future path.
-Hearing about the potential demand for software developers, I opted for the Computer Science route.
-Initially challenging, I contemplated switching majors.
-
-However, for extra credit, I joined a project helping a professor build a basic data capture and analysis system. 
-It was a simple app with data entry forms and grids, but it showed me how software could be used to solve real problems. That experience put things into perspective for me, and I stuck with it.
-
-Since then, I’ve focused on solving problems through software. 
-My career has taken me across industries like Travel, Law, Technology, and Logistics, 
-where I’ve built systems including ERP, CRM, document management, and automation tools.
-
 
