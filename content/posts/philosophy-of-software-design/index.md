@@ -1,8 +1,8 @@
 
 +++
+title = 'Software Design in age of AI'
 date = 2025-05-15
 featured_image = 'philosophy-of-software-design.jpg'
-toc = true
 tags = ["software design", "architecture", "thoughts", "ai"]
 +++
 
